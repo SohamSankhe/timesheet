@@ -1,0 +1,5 @@
+<h4>New Sheet</h4>
+<br/>
+<%= render "form.html", Map.put(assigns, :action, Routes.sheet_path(@conn, :create)) %>
+
+<span><%= link "Back", to: Routes.sheet_path(@conn, :index) %></span>

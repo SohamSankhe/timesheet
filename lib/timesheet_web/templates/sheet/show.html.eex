@@ -1,0 +1,82 @@
+<h4>Show Sheet</h4>
+<br/>
+<ul>
+
+  <li>
+    <strong>Date: &nbsp;</strong>
+    <%= @sheet.date %>
+  </li>
+  <br/><br/>
+  <table class="table table-striped">
+    <tr>
+      <th>Task</th>
+      <th>Hours Spent</th>
+    </tr>
+
+    <%= if nil != @sheet.task1 do %>
+    <tr>
+      <td><%= @sheet.task1.name %></td>
+      <td><%= @sheet.hours1 %></td>
+    </tr>
+    <% end %>
+
+    <%= if nil != @sheet.task2 do %>
+    <tr>
+      <td><%= @sheet.task2.name %></td>
+      <td><%= @sheet.hours2 %></td>
+    </tr>
+    <% end %>
+
+    <%= if nil != @sheet.task3 do %>
+    <tr>
+      <td><%= @sheet.task3.name %></td>
+      <td><%= @sheet.hours3 %></td>
+    </tr>
+    <% end %>
+
+    <%= if nil != @sheet.task4 do %>
+    <tr>
+      <td><%= @sheet.task4.name %></td>
+      <td><%= @sheet.hours4 %></td>
+    </tr>
+    <% end %>
+
+    <%= if nil != @sheet.task5 do %>
+    <tr>
+      <td><%= @sheet.task5.name %></td>
+      <td><%= @sheet.hours5 %></td>
+    </tr>
+    <% end %>
+
+    <%= if nil != @sheet.task6 do %>
+    <tr>
+      <td><%= @sheet.task6.name %></td>
+      <td><%= @sheet.hours6 %></td>
+    </tr>
+    <% end %>
+
+    <%= if nil != @sheet.task7 do %>
+    <tr>
+      <td><%= @sheet.task7.name %></td>
+      <td><%= @sheet.hours7 %></td>
+    </tr>
+    <% end %>
+
+    <%= if nil != @sheet.task8 do %>
+    <tr>
+      <td><%= @sheet.task8.name %></td>
+      <td><%= @sheet.hours8 %></td>
+    </tr>
+    <% end %>
+  </table>
+  <br/><br/>
+
+  <li>
+    <strong>Is approved:</strong>
+    <%= @sheet.is_approved %>
+  </li>
+
+</ul>
+
+<!-- <span><%= link "Edit", to: Routes.sheet_path(@conn, :edit, @sheet) %></span>
+<span><%= link "Back", to: Routes.sheet_path(@conn, :index) %></span> !-->

@@ -1,0 +1,32 @@
+<h4>Listing Your Sheets</h4>
+<br/>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Is approved</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for sheet <- @sheets do %>
+    <tr>
+      <td><%= sheet.date %></td>
+      <td><%= sheet.is_approved %></td>
+
+      <td>
+        <span><%= link "Show", to: Routes.sheet_path(@conn, :show, sheet) %></span>
+        <!-- <span><%= link "Edit", to: Routes.sheet_path(@conn, :edit, sheet) %></span>
+        <span><%= link "Delete", to: Routes.sheet_path(@conn, :delete, sheet), method: :delete, data: [confirm: "Are you sure?"] %></span> !-->
+        <%= if @current_user do %>
+          <%= if @current_user.isManager do %>
+            <span><%= link "Approve / Disapprove", to: Routes.sheet_path(@conn, :edit, sheet) %></span>
+          <% end %>
+        <% end %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Sheet", to: Routes.sheet_path(@conn, :new) %></span>

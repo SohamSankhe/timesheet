@@ -1,0 +1,119 @@
+<%= form_for @changeset, @action, fn f -> %>
+  <%= if @changeset.action do %>
+    <div class="alert alert-danger">
+      <p>Oops, something went wrong! Please check the errors below.</p>
+    </div>
+  <% end %>
+
+  <%= label f, :date %> &nbsp;
+  <%= date_select f, :date %>
+  <%= error_tag f, :date %>
+
+  <table class="table table-striped">
+    <tr>
+      <th>Task</th>
+      <th>Hours Spent</th>
+    </tr>
+    <tr>
+      <td>
+        <%= text_input f, :task1Name %>
+        <%= error_tag f, :task1Name %>
+      </td>
+      <td>
+        <%= number_input f, :hours1 %>
+        <%= error_tag f, :hours1 %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= text_input f, :task2Name %>
+        <%= error_tag f, :task2Name %>
+      </td>
+      <td>
+        <%= number_input f, :hours2 %>
+        <%= error_tag f, :hours2 %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= text_input f, :task3Name %>
+        <%= error_tag f, :task3Name %>
+      </td>
+      <td>
+        <%= number_input f, :hours3 %>
+        <%= error_tag f, :hours3 %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= text_input f, :task4Name %>
+        <%= error_tag f, :task4Name %>
+      </td>
+      <td>
+        <%= number_input f, :hours4 %>
+        <%= error_tag f, :hours4 %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= text_input f, :task5Name %>
+        <%= error_tag f, :task5Name %>
+      </td>
+      <td>
+        <%= number_input f, :hours5 %>
+        <%= error_tag f, :hours5 %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= text_input f, :task6Name %>
+        <%= error_tag f, :task6Name %>
+      </td>
+      <td>
+        <%= number_input f, :hours6 %>
+        <%= error_tag f, :hours6 %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= text_input f, :task7Name %>
+        <%= error_tag f, :task7Name %>
+      </td>
+      <td>
+        <%= number_input f, :hours7 %>
+        <%= error_tag f, :hours7 %>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <%= text_input f, :task8Name %>
+        <%= error_tag f, :task8Name %>
+      </td>
+      <td>
+        <%= number_input f, :hours8 %>
+        <%= error_tag f, :hours8 %>
+      </td>
+    </tr>
+
+  </table>
+  <br/>
+
+  <%= if @current_user do %>
+    <%= if @current_user.isManager do %>
+      <%= label f, :Approve? %>  &nbsp;
+      <%= checkbox f, :is_approved %>
+      <%= error_tag f, :is_approved %>
+    <% end %>
+  <% end %>
+
+  <div>
+    <%= submit "Save" %>
+  </div>
+<% end %>
