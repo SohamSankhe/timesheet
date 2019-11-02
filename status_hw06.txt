@@ -1,0 +1,44 @@
+
+Web Dev Fall 2019 HW06 Status
+
+Answer the following questions:
+
+
+1. What's your name?
+
+Soham Sankhe
+
+
+2. What's the URL of the github repo with your work for this HW?
+
+https://github.com/SohamSankhe/timesheet.git
+
+
+3. What's the version number of your github release?
+
+Commit number - 494a565
+
+
+4. What's the URL that you deployed to?
+
+hw06.soham5610.space
+
+
+5. Is your app functionality complete? If not, what's missing?
+
+Yes. 
+The only thing missing is the drop down for job codes in time sheet.
+But it works when the job code is typed in.
+Please use the /tasks route to get the list of tasks/jobs.
+
+
+6. Is your app properly deployed? If not, what went wrong?
+
+Yes.
+
+
+
+And here's a list of tasks for grading comments. Just leave this here:
+ - Development
+ - Deployment
+ - Submission
